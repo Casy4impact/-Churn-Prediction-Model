@@ -1,4 +1,4 @@
-# -Churn-Prediction-Model
+# Churn-Prediction-Model
 # Project Problem Overview:
 Waze, as a community-based navigation app, faces a critical challenge with user churn. The app’s success relies on consistent user engagement and retention, but the company is experiencing a significant number of users either uninstalling the app or discontinuing its use. This attrition threatens not only user numbers but also potentially impacts revenue and the quality of service provided. To address this, Waze aims to implement a Churn Prediction Model to anticipate user behavior and proactively intervene to retain users at risk of churn.
 # Objectives of the Project:
