@@ -12,7 +12,7 @@ Waze, a globally used navigation application, recognizes the significance of use
 The project will involve an in-depth analysis of historical user behavior, app usage patterns, and various factors contributing to user churn. Utilizing this analysis, a predictive model will be developed to forecast potential churn, enabling Waze to intervene before users disengage from the platform. This intervention will include tailored strategies designed to re-engage and retain users who show signs of leaving the platform.
 Ultimately, the Churn Prediction Model project aims not only to reduce user attrition but also to foster a more data-driven and proactive approach to user retention strategies within Waze. By empowering leadership with insights derived from data analysis, the project will guide strategic decisions and actions to enhance user satisfaction, drive engagement, and sustain the growth of the platform.
 
-###### Below are the predictor variables arranged in order of their predictive power
+### Below are the predictor variables arranged in order of their predictive power
 1.	n_days_after_onboarding: The number of days since a user sign up for the app
 2.	activity_days: Number of days the user opens the app during the month   
 3.	duration_minutes_drives: Total duration driven in minutes during the month
@@ -51,4 +51,4 @@ The classification reports provide a comprehensive evaluation of the performance
 # Business Recommendations and Conclusions:
 If the goal is to prioritize precision for predicting customer churn, further tuning and evaluation may be necessary, as both Logistic Regression and Gradient Boosting models have relatively low precision for the 'churned' class.
 The Decision Tree model might need improvement, and its overall lower accuracy suggests it may not be the best choice for this specific task.
-# Logistic Regression is the best Performing model. It has been productionised
+### Logistic Regression is the best Performing model. It has been productionised
