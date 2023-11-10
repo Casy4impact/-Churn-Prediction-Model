@@ -12,7 +12,7 @@ Waze, a globally used navigation application, recognizes the significance of use
 The project will involve an in-depth analysis of historical user behavior, app usage patterns, and various factors contributing to user churn. Utilizing this analysis, a predictive model will be developed to forecast potential churn, enabling Waze to intervene before users disengage from the platform. This intervention will include tailored strategies designed to re-engage and retain users who show signs of leaving the platform.
 Ultimately, the Churn Prediction Model project aims not only to reduce user attrition but also to foster a more data-driven and proactive approach to user retention strategies within Waze. By empowering leadership with insights derived from data analysis, the project will guide strategic decisions and actions to enhance user satisfaction, drive engagement, and sustain the growth of the platform.
 
-## Below are the predictor variables arranged in order of their predictive power
+###### Below are the predictor variables arranged in order of their predictive power
 1.	n_days_after_onboarding: The number of days since a user sign up for the app
 2.	activity_days: Number of days the user opens the app during the month   
 3.	duration_minutes_drives: Total duration driven in minutes during the month
@@ -24,3 +24,31 @@ Ultimately, the Churn Prediction Model project aims not only to reduce user attr
 9.	drives: An occurrence of driving at least 1 km during the month   
 10.	total_navigations_fav2: Total navigations since onboarding to the user’s favorite place 2  
 11.	device_iPhone: iPhone mobile phone device used to access the app by the user
+
+
+# Interpret and compare the 3 models
+The classification reports provide a comprehensive evaluation of the performance of three different models (Logistic Regression, Decision Tree, and Gradient Boosting) on a binary classification task. Here's an interpretation and comparison of the results:
+
+# Logistic Regression Model:
+- Precision: Precision for the 'churned' class is low (0.52), indicating that when the model predicts a customer will churn, it is correct about 52% of the time. On the other hand, the precision for the 'retained' class is high (0.83).
+- Recall: Recall for the 'churned' class is very low (0.07), suggesting that the model misses a significant number of actual churned customers. However, recall for the 'retained' class is high (0.99), indicating that the model effectively captures the majority of retained customers.
+- F1-Score: The F1-score is a harmonic mean of precision and recall. The F1-score for 'churned' is low (0.12), reflecting the trade-off between precision and recall. The F1-score for 'retained' is high (0.90), indicating a good balance between precision and recall.
+- Accuracy: Overall accuracy is 82%, meaning the model correctly predicts the class for 82% of instances.
+# Decision Tree Model:
+- Precision: Precision for the 'churned' class is relatively low (0.27), and precision for the 'retained' class is high (0.84).
+- Recall: Recall for both classes is similar, with 'churned' at 0.28 and 'retained' at 0.84.
+- F1-Score: The F1-score for 'churned' is moderate (0.28), and for 'retained' is high (0.84).
+- Accuracy: Overall accuracy is 73%, which is lower than the Logistic Regression model.
+# Gradient Boosting Model:
+- Precision: Precision for the 'churned' class is similar to Logistic Regression (0.52), and precision for the 'retained' class is high (0.83).
+- Recall: Recall for 'churned' is low (0.08), similar to Logistic Regression, while recall for 'retained' is high (0.98), similar to the Logistic Regression model.
+- F1-Score: The F1-score for 'churned' is low (0.13), and for 'retained' is high (0.90).
+- Accuracy: Overall accuracy is 82%, matching the Logistic Regression model.
+# Comparison:
+- The Decision Tree model generally performs the worst, with lower precision, recall, and accuracy compared to Logistic Regression and Gradient Boosting.
+- Logistic Regression and Gradient Boosting models show similar performance, with high precision and recall for the 'retained' class and lower values for the 'churned' class.
+- Accuracy is higher for Logistic Regression and Gradient Boosting compared to the Decision Tree.
+# Business Recommendations and Conclusions:
+If the goal is to prioritize precision for predicting customer churn, further tuning and evaluation may be necessary, as both Logistic Regression and Gradient Boosting models have relatively low precision for the 'churned' class.
+The Decision Tree model might need improvement, and its overall lower accuracy suggests it may not be the best choice for this specific task.
+# Logistic Regression is the best Performing model. It has been productionised
